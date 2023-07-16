@@ -11,11 +11,12 @@ int main(void)
 {
 	int digit = 10;
 
-	for (int i = 0; i < digit; i++)
+	int i = 0;
+	while (i <= digit)
 	{
-		printf("%d", i);
+		printf("%d\n", i);
+		i++;
 	}
-	putchar('\n');
 
 	return (0);
 }
