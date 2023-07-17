@@ -28,8 +28,12 @@ int main(void)
 		{
 			putchar(digit + '0');
 			putchar(a + '0');
-			putchar(44);
-			putchar(32);
+
+			if (digit != 8 || a != 9)
+			{
+				putchar(44);
+				putchar(32);
+			}
 		}
 	}
 	putchar('\n');
