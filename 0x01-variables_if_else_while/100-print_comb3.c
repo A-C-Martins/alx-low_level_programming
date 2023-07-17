@@ -1,44 +1,37 @@
 #include <stdio.h>
+
 /**
- * main - main body
+ * main -main body
  *
  * Return: 0 success
  */
 int main(void)
 {
-	int alpha = 10;
+	int alpha = 9;
 	int digit;
-	int i, a, k, min;
-	
-	for (k = 10; k > 1; k--)
+	int i, a;
+
+	for (i = 0; i <= alpha; i++)
 	{
-		min = k;
-		
-		for (i = 0; i < alpha; i++)
-		{
-			digit = alpha - min;
-		}
-
+		digit = i;
 		/**
-		 * ===============================================================================
-		 * ===============================================================================
+		 * =================================================
+		 * printf(" min is %d\t", min);
+		 * printf("digi %d\n", digit);
+		 * ==============================================
+		 * this program prints list of numbers, extracting
+		 * only those numbers that do not
+		 * occure twise
+		 * =================================================
 		 */
-		for (a = 0; a < 10; a++)
+		for (a = digit + 1; a <= 9; a++)
 		{
-			if (digit != a )
-			{
-				putchar(digit + '0');
-				putchar(a + '0');
-			}
-
-			if (a != digit)
-			{
-				putchar(44);
-				putchar(32);
-			}
+			putchar(digit + '0');
+			putchar(a + '0');
+			putchar(44);
+			putchar(32);
 		}
 	}
 	putchar('\n');
-	
 	return (0);
 }
