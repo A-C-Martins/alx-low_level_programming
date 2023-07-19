@@ -20,19 +20,14 @@ int _islower(int c)
 
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
-		if (c == 0)
+		if (c > 96 && c < 123)
+		{
+			return (1);
+		}
+		else
 		{
 			return (0);
 		}
-		else
-			if (c > 0)
-			{
-				return (1);
-			}
-			else
-			{
-				return (0);
-			}
 	}
 	return (0);
 }
