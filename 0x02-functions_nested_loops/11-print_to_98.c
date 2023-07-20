@@ -14,15 +14,15 @@ void print_to_98(int n)
 
 	if (n >= size)
 	{
-		for (n = 0; n > size; n--)
+		while (n > size)
 		{
-			printf("%d, ", n - 1);
+			printf("%d, ", n--);
 		}
 		printf("%d\n", n);
 	}
 	else
 	{
-		for (n = 0; n < size; n++)
+		while (n < size)
 		{
 			printf("%d, ", n++);
 		}
