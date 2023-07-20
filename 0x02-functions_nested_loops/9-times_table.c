@@ -9,6 +9,7 @@ void times_table(void)
 {
 	int number;
 	int multipliar;
+	int result;
 
 	for (number = 0; number <= 9; number++)
 	{
@@ -18,8 +19,6 @@ void times_table(void)
 		{
 			_putchar(44);
 			_putchar(32);
-
-			int result;
 
 			result = number * multipliar;
 
