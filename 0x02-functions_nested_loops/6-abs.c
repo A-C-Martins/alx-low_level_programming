@@ -1,18 +1,22 @@
 #include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 
 /**
  * _abs - prints the absolut number of an input
  *
- * @j: the number
+ * @j: get the abs of a number
  *
  * Return: num
  */
 int _abs(int j)
 {
-	int num;
-
-	j = abs(num);
-
-	return (num);
+	if (j < 0)
+	{
+		return (-j);
+	}
+	else
+	{
+		return (j);
+	}
 }
