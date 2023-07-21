@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * peint_line - draws a horizontal line
+ * print_line - draws a horizontal line
  * @n: counter
  */
 
@@ -12,7 +12,7 @@ void print_line(int n)
 
 	for (i = 0; i <= n; i++)
 	{
-		if (i != 0 || i <= 0)
+		if (i != 0 || i > 0)
 		{
 			_putchar('-');
 		}
