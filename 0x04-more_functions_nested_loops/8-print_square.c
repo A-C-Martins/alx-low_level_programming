@@ -2,6 +2,8 @@
 #include "main.h"
 /**
  * print_square - prints # square of a given number
+ *
+ * @size: number of loop time
  */
 void print_square(int size)
 {
@@ -11,12 +13,12 @@ void print_square(int size)
 	{
 		for (hth = 0; hth < size; hth++)
 		{
-			
+
 			for (wth = 0; wth < size; wth++)
 			{
 				_putchar('#');
 			}
-			
+
 			_putchar('\n');
 		}
 	}
