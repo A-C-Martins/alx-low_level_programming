@@ -2,26 +2,33 @@
 #include "main.h"
 
 /**
- * more_numbers - peints 10 timws 0 to 14
+ * more_numbers - prints 10 times 1 to 14
  */
 
 void more_numbers(void)
 {
-	int i, j;
 
-	while (j <= 9)
+	int a = 0;
+	int b = 0;
+
+	while (b <= 9)
 	{
-		while (i <= 14)
+		while (a <= 14)
 		{
-			if (i > j)
-			{
-				_putchar(i / 10 + '0');
-			}
-			_putchar(i % 10 + '0');
-			i++;
+			if (a > 9)
+				putchar(a / 10 + '0');
+			putchar(a % 10 + '0');
+			a++;
+
 		}
-		_putchar('\n');
-		j++;
-		i = 0;
+	putchar('\n');
+	b++;
+	a = 0;
 	}
+}
+
+int main(void)
+{
+	more_numbers();
+	return (0);
 }
