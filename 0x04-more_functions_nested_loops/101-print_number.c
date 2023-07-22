@@ -12,7 +12,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		/* prints '-' */
-		_putchar('-')
+		_putchar('-');
 
 		/* changes the value to absolute value */
 		n = -n;
