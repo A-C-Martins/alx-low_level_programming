@@ -7,6 +7,7 @@
 */
 void print_number(int n)
 {
+	unsigned int digit = n;
 	/* checks if number is negative if it is*/
 
 	if (n < 0)
@@ -15,15 +16,15 @@ void print_number(int n)
 		_putchar('-');
 
 		/* changes the value to absolute value */
-		n = -n;
+		digit = -digit;
 	}
-	/* checks if n is greater or equal to 10 */
+	/* checks if digit is greater or equal to 10 */
 
-	if ((n / 10) > 0)
+	if ((digit / 10) > 0)
 	{
 		/* function call it self to make sure the digit are printed correctly*/
 
-		print_number(n / 10);
+		print_number(digit / 10);
 	}
-	_putchar((n % 10) + '0');
+	_putchar((digit % 10) + '0');
 }
