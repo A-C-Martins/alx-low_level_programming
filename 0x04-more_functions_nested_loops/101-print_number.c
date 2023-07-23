@@ -19,11 +19,11 @@ void print_number(int n)
 	}
 	/* checks if n is greater or equal to 10 */
 
-	if (n / 10)
+	if ((n / 10) > 0)
 	{
 		/* function call it self to make sure the digit are printed correctly*/
 
 		print_number(n / 10);
 	}
-	_putchar(n % 10 + '0');
+	_putchar((n % 10) + '0');
 }
