@@ -9,9 +9,15 @@
 void reverse_array(int *a, int n)
 {
 	int i;
+	int j;
+	int tmpt;
 
-	for (i = 0; n > i; i--)
+	j = n - 1;
+
+	for (i = 0; n > i; i++)
 	{
-		printf("%d", a[i]);
+		tmpt = arr[i];
+		a[i] = a[j];
+		a[j--] = tmpt;
 	}
 }

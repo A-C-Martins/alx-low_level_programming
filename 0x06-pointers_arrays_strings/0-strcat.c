@@ -10,28 +10,25 @@
  *
  * Return: the appended string
  */
+
 char *_strcat(char *dest, char *src)
 {
-	size_t len1 = _strlen(dest);
-	size_t len2 = _strlen(src);
+	int i, j;
 
-	char *_appended = (char *)malloc((len1 + len2 + 1) sizeof(char));
-	if (_appended == NULL)
-	{
-		printf("memory allocation failed");
-		return (NULL);
-	}
-	size_t i, j;
+	i = 0;
+	j = 0;
 
-	for (i = 0; i < len1; i++)
-	{
-		_appended[i] = dest[i];
-	}
-	for (j = 0; j < len2; j++)
-	{
-		_appended[len1 + 1] = src[j];
-	}
-	_appeded[len1 + len2] = '\0';
+	while (dest[i] != '\0')
+		i++;
 
-	return (_appended);
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+	}
+
+	dest[i] = '\0';
+
+	return (dest);
 }

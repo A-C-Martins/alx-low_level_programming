@@ -12,13 +12,13 @@
 char *string_toupper(char *s)
 {
 	int i;
-	int size = sizeof(s) / sizeof(s[0]);
 
-	char *_upperS;
-
-	for (i = 0; i < size; i++)
+	for (i = 0; s[i] != 0; i++)
 	{
-		_upperS[i] = s[i];
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = s[i] - 32;
+		}
 	}
-	return (_toupper(_upperS));
+	return (s);
 }	
