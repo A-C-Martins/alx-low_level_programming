@@ -1,27 +1,20 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * reverse_array - reversed the inputed string
- * @a: Number to be reversed
- * @n: counter
+ * reverse_array - reverse array of integers
+ * @a: array
+ * @n: number of elements of array
+ *
+ * Return: void
  */
-
 void reverse_array(int *a, int n)
 {
 	int i;
+	int t;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n--; i++)
 	{
+		t = a[i];
+		a[i] = a[n];
+		a[n] = t;
 	}
-	/*putchar('\n');*/
-	for (i = n - 1; i >= 0; i--)
-	{
-		printf("%d", a[i]);
-		if (i != 0)
-		{
-			printf(", ");
-		}
-		/* code */
-	}
-	printf("\n");
 }
