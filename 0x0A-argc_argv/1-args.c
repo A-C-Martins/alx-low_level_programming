@@ -10,14 +10,15 @@
 
 int main(int arcount, char *argv[])
 {
-	int i;
+	int i, j;
 
 	for (i = 0; i < arcount; i++)
 	{
-		printf("%d\n", i);
-		
-		(void)argv;
+		j = i;
 	}
+	printf("%d\n", j);
+
+	(void)argv;
 
 	return (0);
 }
