@@ -5,7 +5,7 @@
  * main - program execution start up
  *
  * @arcount: The argumment index number
- * @argv: Argument vector 
+ * @argv: Argument vector
  *
  * Return: 0 successful
  */
