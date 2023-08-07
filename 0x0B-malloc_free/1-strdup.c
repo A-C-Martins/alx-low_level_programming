@@ -10,13 +10,12 @@
  */
 int _strlen(char *s)
 {
-    int i;
+	int i;
 
-    for (i = 0; s[i] != '\0'; i++)
-    {
-
-    }
-    return i;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+	}
+	return (i);
 }
 
 /**
@@ -34,7 +33,7 @@ char *_strdup(char *str)
 
 	size = _strlen(str);
 
-	if (str == 0)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
