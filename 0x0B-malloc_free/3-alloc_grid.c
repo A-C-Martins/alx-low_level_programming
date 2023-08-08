@@ -19,16 +19,25 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	modi_arrGrid = malloc(width * sizeof(int *));
+	modi_arrGrid = malloc(height * sizeof(int *));
 	if (modi_arrGrid == NULL)
 	{
 		free(modi_arrGrid);
 		return (NULl);
 	}
 
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		modi_arrGrid[i] = (int *)malloc(height * sizeof(int));
+		modi_arrGrid[i] = malloc(width * sizeof(int));
+		if (modi_arrGrid[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+			{
+				free(modi_arrGrid[i]);
+			}
+			free(modi_arrGrat);
+			return (NULL);
+		}
 	}
 
 	if (modi_arrGrid == NULL)
