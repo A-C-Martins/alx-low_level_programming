@@ -23,7 +23,7 @@ int **alloc_grid(int width, int height)
 	if (modi_arrGrid == NULL)
 	{
 		free(modi_arrGrid);
-		return (NULl);
+		return (NULL);
 	}
 
 	for (i = 0; i < height; i++)
@@ -35,7 +35,7 @@ int **alloc_grid(int width, int height)
 			{
 				free(modi_arrGrid[i]);
 			}
-			free(modi_arrGrat);
+			free(modi_arrGrid);
 			return (NULL);
 		}
 	}
