@@ -33,10 +33,7 @@ char *_strdup(char *str)
 
 	size = _strlen(str);
 
-	if (str == NULL)
-		return (NULL);
-
-	strDup = (char *)malloc(size * (sizeof(int)) + 1);
+	strDup = malloc(sizeof(size));
 
 	if (strDup == NULL)
 	{
