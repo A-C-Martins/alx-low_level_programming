@@ -19,7 +19,12 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	modi_arrGrid = (int **)malloc(width * sizeof(int *));
+	modi_arrGrid = malloc(width * sizeof(int *));
+	if (modi_arrGrid == NULL)
+	{
+		free(modi_arrGrid);
+		return (NULl);
+	}
 
 	for (i = 0; i < width; i++)
 	{
