@@ -4,16 +4,16 @@
 
 /**
  * _puts - Outputs a sring and a new line
- * @str: intake string
+ * @s: intake string
  *
  * Author - AC Martins
 */
-void _puts(char *str)
+void _puts(char *s)
 {
-	while (*str != '\0')
+	while (*s != '\0')
 	{
-		_putchar(*str);
-		str++;
+		_putchar(*s);
+		s++;
 	}
 	_putchar('\n');
 }
