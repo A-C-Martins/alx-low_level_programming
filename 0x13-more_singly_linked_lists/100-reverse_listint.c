@@ -20,6 +20,7 @@ listint_t *reverse_listint(listint_t **head)
 	}
 
 	*head = prev;
+	head++;
 
-	return (0);
+	return (*head);
 }
