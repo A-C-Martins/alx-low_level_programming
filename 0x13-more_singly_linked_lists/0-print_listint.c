@@ -13,7 +13,7 @@ size_t print_listint(const listint_t *h)
 
 	for (i = 0; h;)
 	{
-		printf("%u\n", h->n);
+		printf("%d\n", h->n);
 		i++;
 		h = h->next;
 	}
