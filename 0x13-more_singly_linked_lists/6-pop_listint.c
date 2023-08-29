@@ -22,7 +22,5 @@ int pop_listint(listint_t **head)
 		free(*head);
 		*head = temp;
 	}
-	else
-		num - 0;
 	return (num);
 }
