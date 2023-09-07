@@ -1,15 +1,18 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * read_textfile - Read a text file and print to POSIX stdout
- * @filename: char string of files name
- * @letters: number of letters to read and print
- * Return: number of letters read and printed, or 0 if error
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename: A pointer to the name of the file.
+ * @letters: The number of letters the
+ *           function should read and print.
+ *
+ * Return: If the function fails or filename is NULL - 0.
+ *         O/w - the actual number of bytes the function can read and print.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fd;
-	ssize_t rcount, wcount;
+	ssize_t o, r, w;
 	char *buffer;
 
 	if (filename == NULL)
@@ -17,32 +20,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-	{
 		return (0);
-	}
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-	{
-		free(buffer);
-		return (0);
-	}
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
 
-	rcount = read(fd, buffer, letters);
-	if (rcount == -1)
-	{
-		free(buffer);
-		return (0);
-	}
-
-	wcount = write(STDOUT_FILENO, buffer, rcount);
-	if (wcount == -1 || rcount != wcount)
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
 		free(buffer);
 		return (0);
 	}
 
 	free(buffer);
-	close(fd);
-	return (wcount);
+	close(o);
+
+	return (w);
 }
