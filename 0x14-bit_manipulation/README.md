@@ -1,3 +1,0 @@
-Bit Manipulation on c
-
-
