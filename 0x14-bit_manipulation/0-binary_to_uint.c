@@ -13,23 +13,23 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 	{
-		return(0);
+		return (0);
 	}
 	for (size = 0; b[size]; size++)
 	{
 		if (b[size] != '0' && b[size] != '1')
 		{
-			return(0);
+			return (0);
 		}
 	}
 
-	for (pw = 1, all = 0, size--; size >= 0; size-, pw *= 2)
+	for (pw = 1, all = 0, size--; size >= 0; size--, pw *= 2)
 	{
 		if (b[size] == '1')
 		{
-			total +=  pw;
+			all +=  pw;
 		}
 	}
 
-	return(all);
+	return (all);
 }
